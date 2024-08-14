@@ -1,0 +1,21 @@
+<div class="card">
+  <h1 class="card-title">Dice Roller</h1>
+  <form action="/roll" method="post">
+    <div id="dice-inputs" class="form-group">
+      <div class="mb-3">
+        <label for="dice_1" class="form-label">Sides for Die 1:</label>
+        <input type="number" name="dice[]" id="dice_1" class="form-control" required>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between mt-4">
+      <div>
+        <button type="button" class="btn btn-custom" onclick="addDie()">Add another die</button>
+        <button type="button" id="remove-button" class="btn btn-remove" onclick="removeDie()" disabled>Remove last die</button>
+      </div>
+      <button type="submit" class="btn btn-primary">Roll</button>
+    </div>
+  </form>
+</div>
+
+<!-- Container for the AJAX-loaded result -->
+<div id="result-container" class="result-card mt-4"></div>
